@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 
 ## Trackpad
 
@@ -176,11 +176,6 @@ sudo killall PowerChime
 # Menu bar visible always, including in full screen
 defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -int 1
 defaults write NSGlobalDomain _HIHideMenuBar -int 0
-
-
-### RC Extensions
-# Load: ~/.config/shrc/*.zsh, ~/.config/shrc/*.sh, and ~/.zshrc.local
-function { local f; for f ($@) source $f } ~/.config/shrc/*.{z,}sh(N) ~/.zshrc.local(N)
 
 # Screenshots
 SC_PATH="${HOME}/Desktop/Screenshots"

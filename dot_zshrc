@@ -81,6 +81,10 @@ fi
 bindkey -e # Emacs key bindings
 bindkey '^G' pound-insert
 
+### RC Extensions
+# Load: ~/.config/shrc/*.zsh, ~/.config/shrc/*.sh, and ~/.zshrc.local
+function { local f; for f ($@) source $f } ~/.config/shrc/*.{z,}sh(N) ~/.zshrc.local(N)
+
 ### Completion
 # This section *MUST* be at the end of ~/.zshrc and no other sourced rc file
 # should call `compinit` on their own.  `compinit` uses a dump file to speed up
