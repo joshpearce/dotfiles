@@ -2,6 +2,9 @@
 
 # vim: filetype=zsh
 
+setopt prompt_subst
+export PROMPT='%n@%m:%~🌵🌮$(git_super_status) '
+
 # To profile zsh startup, run:
 # % ZPROF=1 zsh -ic "zprof;exit"
 ((ZPROF > 0)) && zmodload zsh/zprof
